@@ -10,8 +10,6 @@ router.post("/livres",checkAuth, livreController.create);
 
 router.get("/livres/:id", livreController.getOne);
 
-router.patch("/livres/:id", checkAuth, livreController.update); // pas vraiment de sens 
-
 router.delete("/livres/:id", checkAuth, livreController.delete);
 
 module.exports = router;
