@@ -15,17 +15,6 @@ module.exports = {
       res.sendStatus(404);
     }
   },
-  update: async (req, res, next) => {
-    const nbUpdated = await Livre.update(req.body, {
-      where: {
-        id: parseInt(req.params.id),
-      },
-      //returning: true
-    });
-    if (!nbUpdated) return res.sendStatus(404);
-
-    res.json(await Livre.findByPk(parseInt(req.params.id)));
-  },
   delete: async (req, res, next) => {
     if (req.livre.id !== parseInt(req.params.id)) return res.sendStatus(403);
 

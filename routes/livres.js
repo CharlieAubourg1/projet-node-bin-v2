@@ -4,15 +4,14 @@ const checkAuth = require("../middlewares/checkAuth.js");
 
 const router = new Router();
 
-router.get("/users", checkAuth, userController.getAll);
+router.get("/livres", livreController.getAll);
 
-router.post("/users", userController.create);
+router.post("/livres",checkAuth, livreController.create); 
 
-router.get("/users/:id", checkAuth, userController.getOne);
+router.get("/livres/:id", livreController.getOne);
 
-router.patch("/users/:id", checkAuth, userController.update);
+router.patch("/livres/:id", checkAuth, livreController.update); // pas vraiment de sens 
 
-router.delete("/users/:id", checkAuth, userController.delete);
+router.delete("/livres/:id", checkAuth, livreController.delete);
 
-router.patch("/users/:id/activate", userController.activateAccount);
 module.exports = router;
