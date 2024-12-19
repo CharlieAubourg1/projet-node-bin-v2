@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  server:
+    image: node:alpine
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: npm run dev
+    ports:
+      - "${PORT}:${PORT}"
+    env_file:
+      - .env.local
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      JWT_SECRET: ${JWT_SECRET}
+
+  db:
+    image: mysql:latest
+    volumes:
+      - db-data:/var/lib/mysql
+    env_file:
+      - .env.local
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+
+volumes:
+  db-data:
