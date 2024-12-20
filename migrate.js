@@ -1,13 +1,7 @@
-require('dotenv').config({ path: '.env.local' });
-
-const port = process.env.PORT || 3000;
-
-console.log('Using PORT:', port);
-
-
 const connection = require("./models/db");
 require("./models/users");
 require("./models/livre");
+require("./models/borrow");
 
 connection
   .sync({
