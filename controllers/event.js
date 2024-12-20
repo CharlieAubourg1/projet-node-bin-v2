@@ -27,7 +27,7 @@ module.exports = {
     res.json(await Event.findByPk(parseInt(req.params.id)));
   },
   delete: async (req, res, next) => {
-    if (req.event.id !== parseInt(req.params.id)) return res.sendStatus(403);
+    //if (req.event.id !== parseInt(req.params.id)) return res.sendStatus(403);
 
     const nbDeleted = await Event.destroy({
       where: {

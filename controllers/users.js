@@ -8,6 +8,7 @@ module.exports = {
     res.status(201).json(await User.create(req.body));
   },
   getOne: async (req, res, next) => {
+    if (req.user.id !== parseInt(req.params.id)) return res.sendStatus(403);
     const user = await User.findByPk(parseInt(req.params.id));
     if (user) {
       res.json(user);

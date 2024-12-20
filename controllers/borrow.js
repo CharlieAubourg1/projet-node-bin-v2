@@ -18,7 +18,7 @@ module.exports = {
   update: async (req, res, next) => {
     const nbUpdated = await Borrow.update(req.body, {
       where: {
-        id: parseInt(req.params.id),
+        borrow_id: parseInt(req.params.id),
       },
       //returning: true
     });
