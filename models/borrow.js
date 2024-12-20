@@ -19,7 +19,7 @@ borrow.init({
         user_id : {
             type: DataTypes.INTEGER,
             references: {
-                model: 'users',
+                model: 'user',
                 key: '_id',
             },
         },
@@ -30,8 +30,9 @@ borrow.init({
             type: DataTypes.DATEONLY
         },
         borrow_status  : {
-            type: DataTypes.ENUM('ongoing', 'returned')
-        }
+            type: DataTypes.ENUM('ongoing', 'returned'),
+            defaultValue: 'ongoing',
+        },
     }, 
     {
         sequelize: connection,
