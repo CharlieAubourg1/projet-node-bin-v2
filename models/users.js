@@ -10,6 +10,11 @@ User.init(
       autoIncrement: true,
       primaryKey: true
     },
+    role: {
+      type: DataTypes.ENUM('user','admin'),
+      defaultValue : 'user',
+      allowNull: false,
+    },
     name: DataTypes.STRING,
     email: {
       type: DataTypes.STRING,
@@ -39,6 +44,7 @@ User.init(
   },
   {
     sequelize: connection,
+    timestamps: false,
   }
 );
 

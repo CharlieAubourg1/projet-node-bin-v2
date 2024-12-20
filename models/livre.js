@@ -23,6 +23,7 @@ Livre.init({
     }  
   }, {
     sequelize: connection,
+    timestamps: false,
   });
 
 module.exports = Livre;

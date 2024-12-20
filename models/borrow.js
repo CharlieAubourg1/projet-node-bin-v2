@@ -36,6 +36,7 @@ borrow.init({
     }, 
     {
         sequelize: connection,
+        timestamps: false,
     }
 );
 module.exports = borrow;

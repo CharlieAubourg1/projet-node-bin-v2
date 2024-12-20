@@ -20,6 +20,7 @@ Event.init({
     }  
   }, {
     sequelize: connection,
+    timestamps: false,
   });
 
 module.exports = Event;
