@@ -5,12 +5,12 @@ const Event = require("./models/event");
 const Borrow = require("./models/borrow");
 
 
-User.hasMany(Borrow, { foreignKey: "_id" });
-Borrow.belongsTo(User, { foreignKey: "_id" });
+User.hasMany(Borrow, { foreignKey: "user_id" });
+Borrow.belongsTo(User, { foreignKey: "user_id" });
 
 // Book can be borrowed multiple times
-Livre.hasMany(Borrow, { foreignKey: "_id" });
-Borrow.belongsTo(Livre, { foreignKey: "_id" });
+Livre.hasMany(Borrow, { foreignKey: "book_id" });
+Borrow.belongsTo(Livre, { foreignKey: "book_id" });
 
 connection
   .sync({

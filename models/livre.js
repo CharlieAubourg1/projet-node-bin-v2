@@ -4,7 +4,7 @@ const connection = require("./db");
 class Livre extends Model {}
 
 Livre.init({
-    _id: {
+    id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true

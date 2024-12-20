@@ -4,7 +4,7 @@ const connection = require("./db");
 class Event extends Model {}
 
 Event.init({
-    _id: {
+    id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true
