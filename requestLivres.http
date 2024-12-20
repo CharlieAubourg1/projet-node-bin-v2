@@ -1,0 +1,17 @@
+### POST livre
+POST http://localhost:3000/livres
+Content-Type: application/json
+
+{
+  "name": "Seigneur des anneaux",
+  "genre": "Fantasy"
+}
+
+### GET a livre
+GET http://localhost:3000/livres/1
+
+### GET all livres
+GET http://localhost:3000/livres
+
+### DELETE a livre
+DELETE http://localhost:3000/livres/2

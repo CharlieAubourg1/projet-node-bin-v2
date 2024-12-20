@@ -1,0 +1,48 @@
+### POST users
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Bernard Dupont",
+  "email": "b@d.com",
+  "password": "3093PEMezk"
+}
+
+
+### Activate
+PATCH http://localhost:3000/users/4/activate
+Content-Type: application/json
+
+{
+  "activated": true
+}
+
+### Login
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "j@d.com",
+  "password": "12Az!3456"
+}
+
+### GET a user
+GET http://localhost:3000/users/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MTE4OTR9.nfpOe0fGoUGgql1l-0rWvmkM-Yc4LQKjKmKW3pXUwrU
+
+### GET all users
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IkplYW4gQWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzQ3MDMzNjN9._7Y1LgyRW0lttvIGEdGAjXTt8nqvJfOLGao6gsC3GfI
+
+
+### PATCH a user
+PATCH http://localhost:3000/users/1
+Content-Type: application/json
+
+{
+  "name": "Jane Doe"
+}
+
+### DELETE a user
+DELETE http://localhost:3000/users/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MDQzNjJ9.pUL0DCZF1z1s3c9GHDy1jhl6yQseZNyJfAoXn2iPfrI

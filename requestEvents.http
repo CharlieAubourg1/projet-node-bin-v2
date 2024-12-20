@@ -1,0 +1,18 @@
+### POST event
+POST http://localhost:3000/event
+Content-Type: application/json
+
+{
+  "typeEvent": "Seigneur des anneaux",
+  "invite": "Jojo",
+  "dateEvent": "2024-12-20"
+}
+
+### GET a event
+GET http://localhost:3000/event/1
+
+### GET all event
+GET http://localhost:3000/event
+
+### DELETE a event
+DELETE http://localhost:3000/event/2

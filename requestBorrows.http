@@ -1,0 +1,24 @@
+### POST borrow
+POST http://localhost:3000/borrow
+Content-Type: application/json
+
+{
+  "book_id": 1,
+  "user_id": 1,
+  "borrow_date": "2024-12-01"
+}
+
+### GET a borrow
+GET http://localhost:3000/borrow/1
+
+### GET all borrows
+GET http://localhost:3000/borrow
+
+
+### PATCH a borrow
+PATCH http://localhost:3000/borrow/3
+Content-Type: application/json
+
+{
+  "return_date": "2024-12-31"
+} 
