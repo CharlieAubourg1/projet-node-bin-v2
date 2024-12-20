@@ -12,14 +12,14 @@ borrow.init({
         book_id : {
             type: DataTypes.INTEGER,
             references: {
-                model: 'livre',
+                model: 'Livres',
                 key: '_id',
             },
         },
         user_id : {
             type: DataTypes.INTEGER,
             references: {
-                model: 'user',
+                model: 'Users',
                 key: '_id',
             },
         },
