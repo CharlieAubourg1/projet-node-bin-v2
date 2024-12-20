@@ -1,6 +1,9 @@
-module.exports = (req, res, next) => {
-    if (!req.user || req.user.role !== 'admin') {
-        return res.sendStatus(403); // Interdit
+module.exports = () => {
+  return (req, res, next) => {
+    const roles = 'admin';
+    if (!roles.includes(req.user.role)) {
+      return res.status(403).json({ message: 'Accès refusé' });
     }
     next();
+  };
 };

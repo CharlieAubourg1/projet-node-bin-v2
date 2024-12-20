@@ -5,7 +5,7 @@ const isAdmin = require("../middlewares/isAdmin.js");
 
 const router = new Router();
 
-router.get("/users", checkAuth, userController.getAll);
+router.get("/users", checkAuth, isAdmin, userController.getAll);
 
 router.post("/users", userController.create);
 
