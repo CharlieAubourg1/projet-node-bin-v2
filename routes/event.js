@@ -6,12 +6,12 @@ const router = new Router();
 
 router.get("/event", eventController.getAll);
 
-router.post("/event", checkAuth, eventController.create); 
+router.post("/event", eventController.create); 
 // isAdmin
 
 router.get("/event/:id", eventController.getOne);
 
-router.delete("/event/:id", checkAuth, eventController.delete);
+router.delete("/event/:id", eventController.delete);
 // isAdmin
 
 module.exports = router;

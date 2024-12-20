@@ -13,7 +13,7 @@ router.get("/users/:id", checkAuth, userController.getOne);
 
 router.patch("/users/:id", checkAuth, userController.update);
 
-router.delete("/users/:id", checkAuth, isAdmin, userController.delete);
+router.delete("/users/:id", checkAuth, userController.delete);
 
 router.patch("/users/:id/activate", userController.activateAccount);
 module.exports = router;

@@ -6,10 +6,10 @@ const router = new Router();
 
 router.get("/borrow", borrowController.getAll);
 
-router.post("/borrow",checkAuth, borrowController.create); 
+router.post("/borrow", borrowController.create); 
 
 router.get("/borrow/:id", borrowController.getOne);
 
-router.patch("/borrow/:id", checkAuth, borrowController.update);
+router.patch("/borrow/:id", borrowController.update);
 
 module.exports = router;

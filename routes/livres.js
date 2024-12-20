@@ -6,10 +6,10 @@ const router = new Router();
 
 router.get("/livres", livreController.getAll);
 
-router.post("/livres",checkAuth, livreController.create); 
+router.post("/livres", livreController.create); //is admin
 
 router.get("/livres/:id", livreController.getOne);
 
-router.delete("/livres/:id", checkAuth, livreController.delete);
+router.delete("/livres/:id", livreController.delete); //is admin
 
 module.exports = router;
