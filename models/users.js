@@ -1,3 +1,4 @@
+const bcrypt = require("bcryptjs");
 const { Model, DataTypes } = require("sequelize");
 const connection = require("./db");
 
@@ -47,5 +48,15 @@ User.init(
     timestamps: false,
   }
 );
+User.beforeCreate(async (user) => {
+  const salt = await bcrypt.genSalt(10);
+  user.password = await bcrypt.hash(user.password, salt);
+});
 
+User.beforeUpdate(async (user) => {
+  if(user.changed('password')) {
+    const salt = await bcrypt.genSalt(10);
+    user.password = await bcrypt.hash(user.password, salt);
+  }
+});
 module.exports = User;
