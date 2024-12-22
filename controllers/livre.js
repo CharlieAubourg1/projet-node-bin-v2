@@ -16,8 +16,6 @@ module.exports = {
     }
   },
   delete: async (req, res, next) => {
-    //if (req.livre.id !== parseInt(req.params.id)) return res.sendStatus(403);
-
     const nbDeleted = await Livre.destroy({
       where: {
         id: parseInt(req.params.id),
