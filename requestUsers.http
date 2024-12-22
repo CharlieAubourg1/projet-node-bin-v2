@@ -3,14 +3,14 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "name": "Bernard Dupont",
-  "email": "b@d.com",
-  "password": "3093PEMezk"
+  "name": "Admin",
+  "email": "a@d.com",
+  "password": "admin"
 }
 
 
 ### Activate
-PATCH http://localhost:3000/users/4/activate
+PATCH http://localhost:3000/users/3/activate
 Content-Type: application/json
 
 {
@@ -22,8 +22,8 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-  "email": "j@d.com",
-  "password": "12Az!3456"
+  "email": "a@d.com",
+  "password": "admin"
 }
 
 ### GET a user
