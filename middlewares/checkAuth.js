@@ -10,7 +10,7 @@ module.exports = async (req, res, next) => {
   try {
     const payload = jwt.verify(
       token,
-      process.env.JWT_SECRET ?? "MyVeryVeryStrongSecret&IL1k31T"
+      process.env.JWT_SECRET
     );
     req.user = await User.findByPk(payload.id);
     if (!req.user) return res.sendStatus(401);

@@ -25,5 +25,15 @@ module.exports = {
     if (!nbUpdated) return res.sendStatus(404);
 
     res.json(await Borrow.findByPk(parseInt(req.params.id)));
+  },
+  //
+  getBorrow: async (req,res,next) => {
+    const borrows = await Borrow.findAll({
+      where: { user_id },
+  });
+  if(!borrows || borrows.length === 0) {
+    res.sendStatus(404);
+  }
+  res.json(borrows);
   }
 };

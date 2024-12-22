@@ -6,12 +6,10 @@ const router = new Router();
 
 router.get("/event", eventController.getAll);
 
-router.post("/event", eventController.create); 
-// isAdmin
+router.post("/event", checkAuth, isAdmin, eventController.create); 
 
 router.get("/event/:id", eventController.getOne);
 
-router.delete("/event/:id", eventController.delete);
-// isAdmin
+router.delete("/event/:id", checkAuth, isAdmin, eventController.delete); //necessaire ? on les stock pas pour avoir un historique si erroné on update nan ?
 
 module.exports = router;
