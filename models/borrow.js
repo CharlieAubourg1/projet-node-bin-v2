@@ -29,10 +29,6 @@ borrow.init({
         return_date : {
             type: DataTypes.DATEONLY
         },
-        borrow_status  : {
-            type: DataTypes.ENUM('ongoing', 'returned'),
-            defaultValue: 'ongoing',
-        },
     }, 
     {
         sequelize: connection,

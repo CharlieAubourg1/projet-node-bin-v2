@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const eventController = require("../controllers/event.js");
 const checkAuth = require("../middlewares/checkAuth.js");
+const isAdmin = require("../middlewares/isAdmin.js");
 
 const router = new Router();
 
