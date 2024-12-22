@@ -19,3 +19,4 @@ router.get("/borrow/:id/:isReturn", checkAuth, checkUserID, borrowController.get
 router.get("/borrow/:id/:isReturn", checkAuth, isAdmin, borrowController.getHistoricOfBook);
 
 module.exports = router;
+ 
