@@ -27,8 +27,8 @@ Content-Type: application/json
 }
 
 ### GET a user
-GET http://localhost:3000/users/4
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MTE4OTR9.nfpOe0fGoUGgql1l-0rWvmkM-Yc4LQKjKmKW3pXUwrU
+GET http://localhost:3000/users/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IkFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM0OTExMTkyfQ.j0G-PySeFBpV2zZiCBdZfvAtSCvJPW8ZD3IdMZqHcYo
 
 ### GET all users
 GET http://localhost:3000/users
@@ -40,9 +40,9 @@ PATCH http://localhost:3000/users/1
 Content-Type: application/json
 
 {
-  "name": "Jane Doe"
+  "password": "Jane Doe"
 }
 
 ### DELETE a user
-DELETE http://localhost:3000/users/4
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MDQzNjJ9.pUL0DCZF1z1s3c9GHDy1jhl6yQseZNyJfAoXn2iPfrI
+DELETE http://localhost:3000/users/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IkFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM0OTExMTkyfQ.j0G-PySeFBpV2zZiCBdZfvAtSCvJPW8ZD3IdMZqHcYo

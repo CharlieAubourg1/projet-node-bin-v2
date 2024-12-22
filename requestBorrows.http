@@ -32,5 +32,5 @@ GET http://localhost:3000/borrow/1/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MDQzNjJ9.pUL0DCZF1z1s3c9GHDy1jhl6yQseZNyJfAoXn2iPfrI
 
 ### GET all borrows of a book
-GET http://localhost:3000/borrow/1/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MDQzNjJ9.pUL0DCZF1z1s3c9GHDy1jhl6yQseZNyJfAoXn2iPfrI
+GET http://localhost:3000/borrow/3/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IkFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM0OTEwODkyfQ.mL5dBXvtknFSJt9Oh-acvQub5e-Ed7HVlPwQ3HhY7zM

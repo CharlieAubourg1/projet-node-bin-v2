@@ -12,7 +12,7 @@ module.exports = async (req, res, next) => {
       token,
       process.env.JWT_SECRET
     );
-    if (playload.id !== req.id && payload.role !== ROLES[1]) return res.status(403);
+    if (payload.id !== req.id && payload.role !== ROLES[1]) return res.status(403);
     next();
   } catch (e) {
     return res.sendStatus(401);
