@@ -16,4 +16,6 @@ router.patch("/borrow/:id", checkAuth, isAdmin, borrowController.update);
 
 router.get("/borrow/:id", checkAuth, checkUserID, borrowController.getBorrow);
 
+router.get("/borrow/:id", checkAuth, isAdmin, borrowController.getHistoricOfBook);
+
 module.exports = router;

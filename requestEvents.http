@@ -1,5 +1,6 @@
 ### POST event
 POST http://localhost:3000/event
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MDQzNjJ9.pUL0DCZF1z1s3c9GHDy1jhl6yQseZNyJfAoXn2iPfrI
 Content-Type: application/json
 
 {
@@ -16,3 +17,4 @@ GET http://localhost:3000/event
 
 ### DELETE a event
 DELETE http://localhost:3000/event/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MDQzNjJ9.pUL0DCZF1z1s3c9GHDy1jhl6yQseZNyJfAoXn2iPfrI

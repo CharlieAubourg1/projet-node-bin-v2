@@ -30,10 +30,19 @@ module.exports = {
   getBorrow: async (req,res,next) => {
     const borrows = await Borrow.findAll({
       where: { user_id },
-  });
-  if(!borrows || borrows.length === 0) {
-    res.sendStatus(404);
-  }
-  res.json(borrows);
+    });
+    if(!borrows || borrows.length === 0) {
+      res.sendStatus(404);
+    }
+    res.json(borrows);
+  },
+  getHistoricOfBook: async (req,res,next) => {
+    const borrows = await Borrow.findAll({
+      where: { book_id },
+    });
+    if(!borrows || borrows.length === 0) {
+      res.sendStatus(404);
+    }
+    res.json(borrows);
   }
 };

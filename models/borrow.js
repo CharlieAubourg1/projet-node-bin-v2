@@ -29,6 +29,9 @@ borrow.init({
         return_date : {
             type: DataTypes.DATEONLY
         },
+        notice : {
+            type: DataTypes.STRING
+        }
     }, 
     {
         sequelize: connection,
