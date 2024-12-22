@@ -1,8 +1,14 @@
 const Borrow = require("../models/borrow");
+const { Op } = require('sequelize');
 
 module.exports = {
   getAll: async (req, res, next) => {
-    res.json(await Borrow.findAll());
+    if (req.params.isReturn === 0)
+      res.json(await Borrow.findAll({where: { return_date: null }}));
+    else if (req.paramas.isReturn === 1)
+      res.json(await Borrow.findAll({where: { return_date: { [Op.ne]: null } }}));
+    else
+      res.json(await Borrow.findAll());
   },
   create: async (req, res, next) => {
     res.status(201).json(await Borrow.create(req.body));
@@ -28,18 +34,69 @@ module.exports = {
   },
   //
   getBorrow: async (req,res,next) => {
-    const borrows = await Borrow.findAll({
-      where: { user_id },
-    });
+    const borrows = null;
+    if (req.params.isReturn === 0)
+    {
+      borrows = await Borrow.findAll({
+        where: { 
+          user_id: parseInt(req.params.id),
+          return_date: null
+        },
+      });
+    }
+    else if (req.paramas.isReturn === 1)
+    {
+      borrows = await Borrow.findAll({
+        where: {
+          user_id: parseInt(req.params.id),
+          return_date: { [Op.ne]: null }
+        },
+      });
+    }
+    else
+    {
+      borrows = await Borrow.findAll({
+        where: {
+          user_id: parseInt(req.params.id)
+        },
+      });
+    }
     if(!borrows || borrows.length === 0) {
       res.sendStatus(404);
     }
     res.json(borrows);
   },
   getHistoricOfBook: async (req,res,next) => {
-    const borrows = await Borrow.findAll({
-      where: { book_id },
-    });
+    const borrows = null;
+    if (req.params.isReturn === 0)
+    {
+      borrows = await Borrow.findAll({
+        where: { 
+          book_id: parseInt(req.params.id),
+          return_date: null
+        },
+      });
+    }
+    else if (req.paramas.isReturn === 1)
+    {
+      borrows = await Borrow.findAll({
+        where: {
+          book_id: parseInt(req.params.id),
+          return_date: { [Op.ne]: null }
+        },
+      });
+    }
+    else
+    {
+      borrows = await Borrow.findAll({
+        where: {
+          book_id: parseInt(req.params.id)
+        },
+      });
+    }
+    if(!borrows || borrows.length === 0) {
+      res.sendStatus(404);
+    }
     if(!borrows || borrows.length === 0) {
       res.sendStatus(404);
     }

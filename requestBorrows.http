@@ -14,7 +14,7 @@ GET http://localhost:3000/borrow/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MDQzNjJ9.pUL0DCZF1z1s3c9GHDy1jhl6yQseZNyJfAoXn2iPfrI
 
 ### GET all borrows
-GET http://localhost:3000/borrow
+GET http://localhost:3000/borrow/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MDQzNjJ9.pUL0DCZF1z1s3c9GHDy1jhl6yQseZNyJfAoXn2iPfrI
 
 
@@ -28,9 +28,9 @@ Content-Type: application/json
 }
 
 ### GET all borrows an user
-GET http://localhost:3000/borrow/1
+GET http://localhost:3000/borrow/1/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MDQzNjJ9.pUL0DCZF1z1s3c9GHDy1jhl6yQseZNyJfAoXn2iPfrI
 
 ### GET all borrows of a book
-GET http://localhost:3000/borrow/1
+GET http://localhost:3000/borrow/1/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkpvaG4gRG9lIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzQ3MDQzNjJ9.pUL0DCZF1z1s3c9GHDy1jhl6yQseZNyJfAoXn2iPfrI
