@@ -12,11 +12,10 @@ router.post("/borrow", checkAuth, isAdmin, borrowController.create);
 
 router.get("/borrow/:id", checkAuth, borrowController.getOne);
 
-router.patch("/borrow/:id/", checkAuth, isAdmin, borrowController.update);
+router.patch("/borrow/:id", checkAuth, isAdmin, borrowController.update);
 
-router.get("/borrow/:id/:isReturn", checkAuth, checkUserID, borrowController.getBorrow);
+router.get("/borrow/user/:id", checkAuth, checkUserID, borrowController.getBorrow);
 
-router.get("/borrow/:id/:isReturn", checkAuth, isAdmin, borrowController.getHistoricOfBook);
+router.get("/borrow/book/:id", checkAuth, isAdmin, borrowController.getBook);
 
 module.exports = router;
- 
