@@ -32,7 +32,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6I
 
 ### GET all users
 GET http://localhost:3000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IkplYW4gQWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MzQ3MDMzNjN9._7Y1LgyRW0lttvIGEdGAjXTt8nqvJfOLGao6gsC3GfI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywibmFtZSI6IkFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzM5NzIxMjk0fQ.-bioxucOelNv1qFYLST6sUxmMUckUS5UpS5BlNqqznU
 
 
 ### PATCH a user

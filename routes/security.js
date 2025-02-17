@@ -17,8 +17,6 @@ router.post('/login', async (req, res, next) => {
       //console.log('Mot de passe en clair:', password);
       //console.log('Mot de passe haché:', user.password);
       
-      
-      
       // Comparer le mot de passe en clair avec le mot de passe haché
       const isMatch = await bcrypt.compare(password, user.password);
       //console.log('Résultat de la comparaison:', isMatch);
